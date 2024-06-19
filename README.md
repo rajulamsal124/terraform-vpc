@@ -21,8 +21,8 @@ The repository is structured as follows:
 ├── public.tf
 ├── private.tf
 ├── providers.tf
-├── terraform.tfvars.tf
-├── variables.tf
+├── terraform.tfvars
+├── outputs.tf
 └── README.md
 ```
 
@@ -30,7 +30,7 @@ The repository is structured as follows:
 
 ### 1. Provider Configuration
 
-Ensure you have configured the AWS provider with your credentials. This can be done in the `provider.tf` file.
+Ensure you have configured the AWS provider with your credentials. This can be done in the `providers.tf` file.
 
 ### 2. Input Variables
 
@@ -40,9 +40,17 @@ The `variables.tf` file contains the input variables used in the Terraform confi
 
 The `main.tf` file contains the primary configuration for the VPC and its components.
 
-### 4. Outputs
+### 4. Public and Private Subnets
+
+The `public.tf` and `private.tf` files contain the configurations for public and private subnets, respectively.
+
+### 5. Outputs
 
 The `outputs.tf` file specifies the outputs of the Terraform configuration, such as the VPC ID and subnet IDs.
+
+### 6. Variable Values
+
+The `terraform.tfvars` file contains the values for the input variables.
 
 ## Usage
 
@@ -69,10 +77,6 @@ terraform apply
 ```sh
 terraform destroy
 ```
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Contributing
 
