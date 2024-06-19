@@ -18,8 +18,11 @@ The repository is structured as follows:
 .
 ├── main.tf
 ├── variables.tf
-├── outputs.tf
-├── provider.tf
+├── public.tf
+├── private.tf
+├── providers.tf
+├── terraform.tfvars.tf
+├── variables.tf
 └── README.md
 ```
 
